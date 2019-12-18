@@ -17,7 +17,7 @@
         <input type="text" name="price">
         <button type="submit">Добавить</button>
     </form>
-    
+
     <table class="tablePrice">
         <thead>
             <th>ID</th>
@@ -38,8 +38,8 @@
                 }
             });
         }
-        
-        $('form').submit((e)=>{
+
+        $('form').submit((e) => {
             e.preventDefault();
             let form = document.forms['formPrice'];
             let price = {
@@ -47,19 +47,20 @@
                 name: form.elements['name'].value,
                 price: form.elements['price'].value
             };
-            if (price.id=="0") {
+            if (price.id == "0") {
                 $.ajax({
                     url: '/api/addPrice',
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(price),
-                    success: (prise)=>{
-                        getAll();
+                    success: (i) => {
+                        i = JSON.parse(i);
+                        $('.tablePrice').append('<tr id="tr_' + i.id + '"><td>' + i.id + '</td><td>' + i.name + '</td><td>' + i.price + '</td></tr>');
                     }
                 });
             }
         })
-        
+
         getAll();
 
     </script>
