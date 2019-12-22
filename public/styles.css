@@ -1,0 +1,14 @@
+li {
+    display: inline;
+}
+
+body {
+    background-color: silver;
+    width: 960px;
+    margin: auto;
+    height: 100%;
+}
+
+html {
+    background-color: white;
+}
