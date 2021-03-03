@@ -12,7 +12,7 @@
     "mongodb": "^3.4.0",
     "mongoose": "^5.8.2",
     "nodemon": "^2.0.2",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "mocha": "^6.2.2"
